@@ -51,7 +51,7 @@ cli
   .option(
     "--systemimage <url>",
     "Set a custom systemimage server url",
-    "https://system-image.ubports.com/"
+    "https://system-image.xfonelabs.com/"
   )
   .parse(process.argv);
 
