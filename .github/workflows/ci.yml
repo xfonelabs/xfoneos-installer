@@ -136,46 +136,9 @@ jobs:
             dist/*.dmg
             dist/*.exe
       - name: upload release assets
-        if: github.event_name == 'release'
-        uses: actions/github-script@v2
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const fs = require('fs');
-            const { repo: { owner, repo }} = context;
-            const tag = context.ref.replace("refs/tags/", "");
-            console.log("trying to upload to", owner, repo, tag);
-            const crypto = require('crypto');
-            const sha256sum = path => new Promise((resolve, reject) => {
-              const hash = crypto.createHash('sha256');
-              const stream = fs.createReadStream(path);
-              stream.on('error', reject);
-              stream.on('data', chunk => hash.update(chunk));
-              stream.on('end', () => resolve(hash.digest('hex')));
-            });
-            github.repos.getReleaseByTag({ owner, repo, tag })
-              .then(({data: {id: release_id}}) =>
-                Promise.all(
-                  fs.readdirSync('./dist/').filter(f =>
-                      f.match(/ubports-installer_*.*/) &&
-                      !f.includes("snap") &&
-                      !f.includes("blockmap")
-                    )
-                    .map(file =>
-                      github.repos.uploadReleaseAsset({
-                        owner, repo, release_id,
-                        name: file,
-                        data: fs.readFileSync(`./dist/${file}`)
-                      })
-                      .then(() => console.log("uploaded", file))
-                      .then(() => sha256sum(`./dist/${file}`))
-                      .then(data =>
-                        github.repos.uploadReleaseAsset({
-                          owner, repo, release_id, data,
-                          name: `${file}.sha256`
-                        })
-                      )
-                      .then(() => console.log("uploaded checksum for", file))
-                  )
-                )
-              )
+        run: |
+          mkdir -p ~/.ssh
+          echo ${{ secrets.PUB_SSH_KEY }} >> ~/.ssh/id_ed25519.pub
+          echo ${{ secrets.PRIV_SSH_KEY }} >> ~/.ssh/id_ed25519
+
+          scp dist/* xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
