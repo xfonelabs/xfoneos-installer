@@ -144,4 +144,4 @@ jobs:
           echo "$pub_ssh_key" >> ~/.ssh/id_ed25519.pub
           echo "$priv_ssh_key" >> ~/.ssh/id_ed25519
 
-          scp dist/* xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
+          scp -o StrictHostKeyChecking=no dist/* xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
