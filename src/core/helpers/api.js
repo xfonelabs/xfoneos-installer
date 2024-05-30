@@ -22,7 +22,7 @@ const axios = require("axios");
 /** @module api */
 
 const api = axios.create({
-  baseURL: "https://ubports.github.io/installer-configs/v2/",
+  baseURL: "https://xfonelabs.github.io/installer-configs/v2/",
   timeout: 60000
 });
 
