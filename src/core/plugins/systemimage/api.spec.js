@@ -9,20 +9,20 @@ const api = require("./api.js");
 const files = [
   {
     checksum: { algorithm: "sha256", sum: "1337" },
-    url: "https://system-image.ubports.com/asdf.img"
+    url: "https://system-image.xfonelabs.com/asdf.img"
   },
-  { url: "https://system-image.ubports.com/asdf.img.asc" },
+  { url: "https://system-image.xfonelabs.com/asdf.img.asc" },
   {
-    url: "https://system-image.ubports.com/gpg/image-signing.tar.xz"
-  },
-  {
-    url: "https://system-image.ubports.com/gpg/image-signing.tar.xz.asc"
+    url: "https://system-image.xfonelabs.com/gpg/image-signing.tar.xz"
   },
   {
-    url: "https://system-image.ubports.com/gpg/image-master.tar.xz"
+    url: "https://system-image.xfonelabs.com/gpg/image-signing.tar.xz.asc"
   },
   {
-    url: "https://system-image.ubports.com/gpg/image-master.tar.xz.asc"
+    url: "https://system-image.xfonelabs.com/gpg/image-master.tar.xz"
+  },
+  {
+    url: "https://system-image.xfonelabs.com/gpg/image-master.tar.xz.asc"
   }
 ];
 
