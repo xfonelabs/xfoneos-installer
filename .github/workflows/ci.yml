@@ -152,3 +152,4 @@ jobs:
             scp -o StrictHostKeyChecking=no dist/*.dmg xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
           elif [ "$ps" == "Windows" ]; then
             scp -o StrictHostKeyChecking=no dist/*.exe xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
+          fi
