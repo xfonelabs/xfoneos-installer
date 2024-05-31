@@ -139,10 +139,16 @@ jobs:
         env:
           pub_ssh_key: ${{ secrets.PUB_SSH_KEY }}
           priv_ssh_key: ${{ secrets.PRIV_SSH_KEY }}
+          os: ${{ runner.os }}
         run: |
           mkdir -p ~/.ssh
           echo "$pub_ssh_key" >> ~/.ssh/id_ed25519.pub
           echo "$priv_ssh_key" >> ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
-          scp -o StrictHostKeyChecking=no dist/* xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
+          if [ "$os" == "Linux" ]; then
+            scp -o StrictHostKeyChecking=no dist/*.deb dist/*.AppImage xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
+          elif [ "$os" == "macOS" ]; then
+            scp -o StrictHostKeyChecking=no dist/*.dmg xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
+          elif [ "$ps" == "Windows" ]; then
+            scp -o StrictHostKeyChecking=no dist/*.exe xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
