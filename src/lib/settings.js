@@ -21,7 +21,7 @@ const { ipcMain } = require("electron");
 const Store = require("electron-store");
 
 /**
- * permanent UBports Installer settings
+ * permanent XFoneOS Installer settings
  */
 const settings = new Store({
   options: {

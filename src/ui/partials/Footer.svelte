@@ -8,7 +8,7 @@
 
   onMount(() => {
     footerData.set({
-      topText: "UBports Installer is starting up",
+      topText: "XFoneOS Installer is starting up",
       underText: "Starting adb service"
     });
   });

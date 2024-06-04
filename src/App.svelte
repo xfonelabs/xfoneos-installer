@@ -112,7 +112,7 @@
     push("/");
     footerData.set({
       topText: "Restarting",
-      underText: `UBports Installer is restarting`,
+      underText: `XFoneOS Installer is restarting`,
       waitingDots: true
     });
     yumi.setPosition("foot");

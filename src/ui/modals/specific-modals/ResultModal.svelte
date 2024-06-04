@@ -25,7 +25,7 @@
   <h4 slot="header">Report your result</h4>
   <div slot="content">
     <p>
-      To fix issues in the UBports Installer, it is vital that the developers
+      To fix issues in the XFoneOS Installer, it is vital that the developers
       receive detailed feedback. To make this easier, the installer automates
       the reporting process. If you're interested in helping us make the UBports
       Installer better, keep reading! If not, click the button below and we will
@@ -37,8 +37,8 @@
         >OPEN-CUTS, the open crowdsourced user testing suite</a
       >
       to manage manual testing and
-      <a href="https://github.com/ubports/ubports-installer/issues">GitHub</a> to
-      track bugs and feature requests for the UBports Installer. Since the installer
+      <a href="https://github.com/xfonelabs/xfoneos-installer/issues">GitHub</a> to
+      track bugs and feature requests for the XFoneOS Installer. Since the installer
       developers rarely have access to all the devices the installer supports, it
       is vital for them to also receive reports about what works.
     </p>

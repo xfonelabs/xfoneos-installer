@@ -23,7 +23,7 @@ const semverGt = require("semver/functions/gt");
 const semverLt = require("semver/functions/lt");
 
 /**
- * UBports Installer version management
+ * XFoneOS Installer version management
  * @property {String} updateUrl url to download the latest stable version of the current package
  */
 class Updater {
@@ -35,7 +35,7 @@ class Updater {
   }
 
   /**
-   * resolves latest version of the UBports Installer
+   * resolves latest version of the XFoneOS Installer
    * @returns {Promise<String>}
    */
   async getLatestVersion() {
@@ -44,7 +44,7 @@ class Updater {
     } else {
       return axios
         .get(
-          "https://api.github.com/repos/ubports/ubports-installer/releases/latest",
+          "https://cdn.xfonelabs.com/installer",
           {
             json: true,
             headers: { "User-Agent": "axios" }
@@ -56,7 +56,7 @@ class Updater {
         })
         .catch(e => {
           throw new Error(
-            `Failed to get latest version of the UBports Installer: ${e}`
+            `Failed to get latest version of the XFoneOS Installer: ${e}`
           );
         });
     }

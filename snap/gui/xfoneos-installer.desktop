@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=ubports-installer
-Comment=UBports Installer
-Exec=ubports-installer
+Name=xfoneos-installer
+Comment=XFoneOS Installer
+Exec=xfoneos-installer
 Terminal=false
 Type=Application
 Icon=${SNAP}/meta/gui/icon.png

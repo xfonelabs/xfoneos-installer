@@ -1,7 +1,7 @@
-name: ubports-installer
-title: UBports Installer
-adopt-info: ubports-installer
-summary: The easy way to install Ubuntu Touch on UBports devices.
+name: xfoneos-installer
+title: XFoneOS Installer
+adopt-info: xfoneos-installer
+summary: The easy way to install Ubuntu Touch on XFone devices.
 description: A friendly cross-platform Installer for Ubuntu Touch. Just connect a supported device to your PC, follow the on-screen instructions and watch this awesome tool do all the rest.
 icon: build/icons/icon.png
 architectures:
@@ -16,8 +16,8 @@ confinement: strict
 base: core20
 
 apps:
-  ubports-installer:
-    command: ./app/ubports-installer --no-sandbox
+  xfoneos-installer:
+    command: ./app/xfoneos-installer --no-sandbox
     extensions:
       - gnome-3-38
     plugs:
@@ -28,7 +28,7 @@ apps:
       - raw-usb
 
 parts:
-  ubports-installer:
+  xfoneos-installer:
     plugin: dump
     source: .
     build-snaps:

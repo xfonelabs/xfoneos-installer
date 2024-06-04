@@ -34,7 +34,7 @@
     </div>
     <p>
       Not all <a href="https://devices.ubuntu-touch.io">Ubuntu Touch devices</a>
-      are supported by the UBports Installer yet. You can find installation instructions
+      are supported by the XFoneOS Installer yet. You can find installation instructions
       for devices not listed here on
       <a href="https://devices.ubuntu-touch.io">devices.ubuntu-touch.io</a>. If
       you want to help, you can

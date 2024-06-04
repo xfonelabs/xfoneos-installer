@@ -1,12 +1,12 @@
 {
-  "name": "ubports-installer",
+  "name": "xfoneos-installer",
   "version": "0.10.0",
-  "description": "The easy way to install Ubuntu Touch on UBports devices. A friendly cross-platform Installer for Ubuntu Touch. Just connect a supported device to your PC, follow the on-screen instructions and watch this awesome tool do all the rest.",
+  "description": "The easy way to install Ubuntu Touch on XFone devices. A friendly cross-platform Installer for Ubuntu Touch. Just connect a supported device to your PC, follow the on-screen instructions and watch this awesome tool do all the rest.",
   "keywords": [
     "Ubuntu",
     "Ubuntu Touch",
-    "UBports",
-    "UBports Installer",
+    "XFone",
+    "XFoneOS Installer",
     "Android",
     "ADB",
     "Fastboot",
@@ -14,15 +14,15 @@
   ],
   "homepage": "https://devices.ubuntu-touch.io",
   "bugs": {
-    "url": "https://github.com/ubports/ubports-installer/issues",
-    "email": "info@ubports.com"
+    "url": "https://github.com/xfonelabs/xfoneos-installer/issues",
+    "email": "webmaster@xfonelabs.com"
   },
-  "repository": "https://github.com/ubports/ubports-installer",
+  "repository": "https://github.com/xfonelabs/xfoneos-installer",
   "author": "Johannah Sprinz <neo@neothethird.de>",
   "license": "GPL-3.0",
   "main": "src/main.js",
   "bin": {
-    "ubports-installer": "src/main.js"
+    "xfoneos-installer": "src/main.js"
   },
   "scripts": {
     "build": "npx rollup -c",

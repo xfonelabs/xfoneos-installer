@@ -105,7 +105,7 @@ class Reporter {
   async getDebugInfo(data, runUrl, logUrl) {
     return encodeURIComponent(
       [
-        `**UBports Installer \`${packageInfo.version}\` (${data.package})**`,
+        `**XFoneOS Installer \`${packageInfo.version}\` (${data.package})**`,
         `Environment: \`${data.environment}\``,
         `Device: ${this.getDeviceLinkMarkdown(data.device)}`,
         `Target OS: ${core?.props?.os?.name}`,

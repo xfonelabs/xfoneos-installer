@@ -128,7 +128,7 @@ class Udev {
     sudo.exec(
       udevCommand,
       {
-        name: "UBports Installer",
+        name: "XFoneOS Installer",
         icns: path.join(__dirname, "../../build/icons/icon.icns")
       },
       error => {

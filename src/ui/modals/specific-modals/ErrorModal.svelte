@@ -34,7 +34,7 @@
     </p>
     <p>
       If this continues to happen, please check if you are affected by <a
-        href="https://github.com/ubports/ubports-installer/issues"
+        href="https://github.com/xfonelabs/xfoneos-installer/issues"
         >a known bug</a
       >.
     </p>
@@ -45,13 +45,13 @@
     <pre>{errorData}</pre>
     {#if showNotLatestStable}
       <p>
-        You are not using the latest stable version of the UBports Installer.
+        You are not using the latest stable version of the XFoneOS Installer.
       </p>
     {/if}
     {#if showGenericUpdateInstructionsError}
       <p>
         You can <a
-          href="https://github.com/ubports/ubports-installer/releases/latest"
+          href="https://github.com/xfonelabs/xfoneos-installer/releases/latest"
           >download the latest version from GitHub</a
         >.
       </p>

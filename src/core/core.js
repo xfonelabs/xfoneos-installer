@@ -42,7 +42,7 @@ const semver = require("semver");
  */
 
 /**
- * UBports Installer core. Parses config files to run actions from plugins.
+ * XFoneOS Installer core. Parses config files to run actions from plugins.
  * @property {Props} props properties object
  * @property {PluginIndex} plugins installer plugins
  */

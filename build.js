@@ -60,8 +60,8 @@ const opts = cli.opts();
 
 var targetOs;
 var buildConfig = {
-  appId: "com.ubports.installer",
-  productName: "ubports-installer",
+  appId: "com.xfonelabs.installer",
+  productName: "xfoneos-installer",
   copyright: `Copyright © 2017-${new Date().getFullYear()} UBports Foundation`,
   artifactName: "${name}_${version}_${os}_${arch}.${ext}",
   publish: [],

@@ -29,7 +29,7 @@ const HeimdallPlugin = require("./heimdall/plugin.js");
 const SystemimagePlugin = require("./systemimage/plugin.js");
 
 /**
- * Index of UBports Installer plugins
+ * Index of XFoneOS Installer plugins
  * @property {Props} props props reference
  * @property {Object} plugins plugins namespace
  * @property {AdbPlugin} plugins.adb adb plugin

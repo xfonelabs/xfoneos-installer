@@ -29,7 +29,7 @@ const reporter = require("./reporter.js");
 class MenuManager {
   /**
    * build global application menu
-   * @param {BrowserWindow} mainWindow main UBports Installer window
+   * @param {BrowserWindow} mainWindow main XFoneOS Installer window
    */
   getMenuTemplate(mainWindow) {
     return [
@@ -124,7 +124,7 @@ class MenuManager {
             visible: settings.size
           },
           {
-            label: "Restart UBports Installer",
+            label: "Restart XFoneOS Installer",
             click: () => {
               mainEvent.emit("restart");
             }
@@ -228,7 +228,7 @@ class MenuManager {
 
   /**
    * set global application menu
-   * @param {BrowserWindow} mainWindow main UBports Installer window
+   * @param {BrowserWindow} mainWindow main XFoneOS Installer window
    */
   setMenu(mainWindow) {
     Menu.setApplicationMenu(

@@ -54,7 +54,7 @@ ipcMain.on("reportResult", async (event, result, error) => {
 // Restart the installer
 // FIXME move after a better way to access mainWindow has been found
 mainEvent.on("restart", () => {
-  log.info("UBports Installer restarting...");
+  log.info("XFoneOS Installer restarting...");
   window.send("user:restart");
   core.reset();
   core.prepare(cli.file, true);
@@ -62,7 +62,7 @@ mainEvent.on("restart", () => {
 
 async function createWindow() {
   log.info(
-    "Welcome to the UBports Installer version " + packageInfo.version + "!"
+    "Welcome to the XFoneOS Installer version " + packageInfo.version + "!"
   );
   log.verbose(`Running on: ${await reporter.getEnvironment()}`);
   log.verbose(`Versions: ${JSON.stringify(process.versions)}`);
@@ -73,7 +73,7 @@ async function createWindow() {
     height: 750,
     minHeight: 600,
     icon: path.join(__dirname, "../build/icons/icon.png"),
-    title: "UBports Installer (" + packageInfo.version + ")",
+    title: "XFoneOS Installer (" + packageInfo.version + ")",
     kiosk: false,
     fullscreen: false,
     webPreferences: {

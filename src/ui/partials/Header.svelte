@@ -9,7 +9,7 @@
 
 <div class="header">
   <h1 id="header-text" class="text-muted installer">
-    UBports Installer ({version})
+    XFoneOS Installer ({version})
   </h1>
   <div class="header-buttons">
     <a class="btn btn-primary" href="https://ubports.com/donate">Donate</a>

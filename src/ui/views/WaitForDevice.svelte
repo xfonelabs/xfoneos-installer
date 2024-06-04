@@ -29,7 +29,7 @@
     />
   </div>
   <div class="col-6">
-    <h4>Welcome to the UBports Installer</h4>
+    <h4>Welcome to the XFoneOS Installer</h4>
     <p>
       We will walk you through the installation process. Don't worry, it's easy!
     </p>
@@ -46,7 +46,7 @@
     </button>
     <p>
       If your device is not detected automatically, you can select it manually
-      to proceed. Please note that the UBports Installer will only work on
+      to proceed. Please note that the XFoneOS Installer will only work on
       <a href="http://devices.ubuntu-touch.io">supported devices</a>.
     </p>
     <button

@@ -20,7 +20,7 @@
 const { CancelablePromise } = require("cancelable-promise");
 
 /**
- * UBports Installer plugin
+ * XFoneOS Installer plugin
  * @abstract
  * @property {Props} props properties
  * @param {String} cachePath cache path
