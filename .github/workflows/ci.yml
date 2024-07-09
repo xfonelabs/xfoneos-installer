@@ -135,7 +135,8 @@ jobs:
             dist/*.AppImage
             dist/*.dmg
             dist/*.exe
-      - name: upload release assets
+        
+      - name: setup ssh keys
         shell: bash
         env:
           pub_ssh_key: ${{ secrets.PUB_SSH_KEY }}
@@ -146,13 +147,18 @@ jobs:
           echo "$pub_ssh_key" >> ~/.ssh/id_ed25519.pub
           echo "$priv_ssh_key" >> ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-
+      
+      - name: upload release assets
+        shell: bash
+        run: |
           if [ "$os" == "Linux" ]; then
             scp -o StrictHostKeyChecking=no dist/*.deb dist/*.AppImage xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
           elif [ "$os" == "macOS" ]; then
             scp -o StrictHostKeyChecking=no dist/*.dmg xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
-          elif [ "$os" == "Windows" ]; then
-            scp -o StrictHostKeyChecking=no dist/*.exe xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
           fi
 
-        
+      - name: upload release assets (windows)
+        if: contains(runner.os, 'Windows')
+        shell: bash
+        run: |
+          scp -o StrictHostKeyChecking=no dist/*.exe xfonelabs@xl1.xfonelabs.com:/mnt/disk2/cdn/installer/
